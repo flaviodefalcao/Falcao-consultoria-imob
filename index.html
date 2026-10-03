@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#030403" />
+  <meta name="color-scheme" content="light" />
+  <meta name="supported-color-schemes" content="light" />
   <title>Falcão Consultoria Imobiliária | Soluções para imóveis em situações complexas</title>
   <meta name="description" content="Venda, penhora, leilão, dívidas e outras situações imobiliárias complexas. A Falcão Consultoria Imobiliária analisa o seu caso e apresenta caminhos com clareza e agilidade." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
+      color-scheme:only light;
       --bg:#030403;
       --surface:#0a0b09;
       --surface-2:#10110f;
@@ -454,6 +457,12 @@
       .compare-col + .compare-col{border-left:0;border-top:1px solid var(--line)}
       .nav-links a:not(.nav-cta){display:none}
     }
+    /* Preserve brand colors when a browser applies automatic dark mode. */
+    .headline-bars span,.nav-cta,.btn-primary,.badge.ok{
+      background-color:#FFC400;
+      background-image:linear-gradient(#FFC400,#FFC400);
+      color:#030403;
+    }
   </style>
 </head>
 <body>
@@ -687,7 +696,7 @@
               <textarea id="mensagem" name="mensagem" placeholder="Ex.: recebi uma intimação, existem parcelas em atraso, o imóvel já foi anunciado..."></textarea>
             </div>
             <button class="btn btn-primary" style="width:100%" type="submit">Falar com um consultor</button>
-            <div class="form-note">O botão pode ser conectado ao WhatsApp da empresa alterando uma linha no código.</div>
+            <div class="form-note">Você será direcionado ao nosso WhatsApp: (11) 96596-8571.</div>
           </form>
         </div>
       </div>
@@ -703,7 +712,7 @@
 
   <script>
     // Coloque aqui o WhatsApp da empresa no formato: 5511999999999
-    const WHATSAPP_NUMBER = "";
+    const WHATSAPP_NUMBER = "5511965968571";
 
     document.getElementById("leadForm").addEventListener("submit", function(e){
       e.preventDefault();
